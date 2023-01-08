@@ -1,0 +1,13 @@
+def fechabisiesta(a):
+# declaro mi funcion y le asigno una variable que en este caso es a
+
+    if a % 4 == 0 and (not(a%100 == 0) or a % 400 == 0):
+        print("el año", a, "es bisiesto")
+    else:
+        print("el año", a,  "NO es bisiesto")
+        
+# establezco la condición y le digo que si a dividido entre 4, 100 y 400 es exactamente igual a 0, el año será bisiesto de lo contrario, no lo será
+
+fechabisiesta(int(input("ingrese el año: ")))
+
+# y ya luego llamo a la función establezco que el resultado sea un entero y que se pueda ingresar el numero para determinar si es bisiesto o no
