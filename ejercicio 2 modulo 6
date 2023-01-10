@@ -1,0 +1,14 @@
+class Alumno():
+    nombre = (input("ingrese su nombre: "))
+    nota = (int(input("ingrese su nota: ")))
+
+    def resultado(self):
+        if self.nota < 10:
+            print("el alumno reprobó")
+        else:
+            print("el alumno aprobó")
+
+a = Alumno()
+print("Alumno: ", a.nombre)
+print("Nota: ", a.nota)
+print(a.resultado())
