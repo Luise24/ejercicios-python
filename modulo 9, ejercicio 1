@@ -1,0 +1,5 @@
+estado = input("Introduce el nombre de los paises con una coma:\n")
+
+paises = [pais for pais in estado.split(",")]
+
+print(",".join(sorted(list(set(paises)))))
