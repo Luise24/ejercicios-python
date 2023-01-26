@@ -1,0 +1,16 @@
+import tkinter
+from tkinter import ttk
+variable1 = tkinter.Tk()
+Lista = ["Venezuela", "Colombia", "Ecuador", "Panamá", "Bolivia"]
+
+variable1.columnconfigure(0, weight=1)
+variable1.columnconfigure(1, weight=3)
+
+label_saludo = tkinter.Label(variable1, text="paises que liberó Simón Bolivar", bg="red", fg="white")
+label_saludo.grid(column=0, row=1, sticky=tkinter.W)
+
+Lista_items = tkinter.StringVar(value=Lista)
+listbox = tkinter.Listbox(variable1, height=20, listvariable=Lista_items)
+listbox.grid(column=0, row=2, sticky=tkinter.E)
+
+variable1.mainloop()
