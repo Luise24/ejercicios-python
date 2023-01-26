@@ -1,0 +1,27 @@
+from tkinter import *
+
+def seleccionar():
+    monitor.config(text="{estoy iniciando el programa}".format(opcion.get()))
+    print(monitor.config)
+def resetear():
+    opcion.set(None)
+    monitor.config(text="estoy reiniciando la lista")
+
+root = Tk()
+opcion = StringVar()
+opcion.set(None)
+Radiobutton(root, text="Venezuela", variable=opcion,
+            value='venezuela', command=seleccionar).pack(anchor=W)
+
+Radiobutton(root, text="colombia", variable=opcion,
+            value='colombia', command=seleccionar).pack(anchor=W)
+Radiobutton(root, text="ecuador", variable=opcion,
+            value='ecuador', command=seleccionar).pack(anchor=W)
+Radiobutton(root, text="perú", variable=opcion,
+            value='perú', command=seleccionar).pack(anchor=W)
+
+monitor = Label(root)
+monitor.pack()
+Button(root, text="Reiniciar", command=resetear).pack()
+
+root.mainloop()
